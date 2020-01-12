@@ -1,0 +1,8 @@
+{
+    "realm": "onewoorks",
+    "auth-server-url": "https://sso.onewoorks-solutions.com/auth/",
+    "ssl-required": "none",
+    "resource": "simple-node",
+    "public-client": true,
+    "confidential-port": 0
+  }
