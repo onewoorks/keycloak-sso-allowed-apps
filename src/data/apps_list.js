@@ -1,9 +1,9 @@
 const apps_info = {
-    "app_1":{
+    "app_spe_development":{
         "name": "Sistem Pengurusan Kedai Emas",
         "url":"https://sistem.pengurusanemas.my"
     },
-    "app_2":{
+    "app_zak":{
         "name": "ZAK",
         "url":"https://zak.pengurusanemas.my"
     },

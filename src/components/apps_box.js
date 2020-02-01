@@ -13,11 +13,10 @@ export default class AppsBox extends React.Component {
         return (
             <a href={this.state.apps_url}>
                 <Card
-                    style={{ textAlign: "center", height: 130 }}
-                    bordered
-                    hoverable
-                >
-                    <p>{this.state.apps_name}</p>
+                    actions={[
+                        <div>{this.state.apps_name}</div>
+                    ]}
+                >  
                 </Card>
             </a>
         )

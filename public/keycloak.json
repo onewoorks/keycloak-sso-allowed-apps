@@ -1,8 +1,8 @@
 {
-    "realm": "onewoorks",
+    "realm": "pengurusan_emas",
     "auth-server-url": "https://sso.onewoorks-solutions.com/auth/",
     "ssl-required": "none",
-    "resource": "simple-node",
+    "resource": "sso-allowed-apps",
     "public-client": true,
     "confidential-port": 0
   }

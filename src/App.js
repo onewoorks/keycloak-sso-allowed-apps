@@ -21,6 +21,7 @@ export default class App extends React.Component {
 
     list_of_allow_apps = () => {
         let roles = this.state.roles
+        console.log(roles)
         let apps = []
         roles.forEach((k, v) => {
             if (k.startsWith("app_")) {
@@ -48,7 +49,6 @@ export default class App extends React.Component {
 
     render() {
         if (this.state.keycloak) {
-          console.log(this.state.keycloak)
             if (this.state.authenticated)
             
                 return (
