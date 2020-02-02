@@ -15,23 +15,20 @@ export default class App extends React.Component {
         this.state = {
             keycloak: null,
             authenticated: false,
-            roles: null
+            apps: null
         }
     }
 
     list_of_allow_apps = () => {
-        let roles = this.state.roles
-        console.log(roles)
-        let apps = []
-        roles.forEach((k, v) => {
-            if (k.startsWith("app_")) {
-                let output = <Col key={v} xs={24} sm={12} md={12} lg={6} >
-                <AppsBox apps_data={apps_info[k]} />
+        let apps = this.state.apps
+        let apps_list = []
+        for(let app in apps){
+                let output = <Col key={app} xs={24} sm={12} md={12} lg={6} >
+                <AppsBox apps_data={apps[app]} app_name={app} />
                 </Col>
-                apps.push(output)
-            }
-        })
-        return apps
+                apps_list.push(output)
+        }
+        return apps_list
     }
 
     componentDidMount() {
@@ -42,8 +39,9 @@ export default class App extends React.Component {
                 this.setState({
                     keycloak: keycloak,
                     authenticated: authenticated,
-                    roles: keycloak.realmAccess.roles
+                    apps: keycloak.resourceAccess
                 })
+                console.log(keycloak)
             })
     }
 
